@@ -4,6 +4,10 @@
     <script type="text/javascript" src="hash.js"></script>
 
     <style>
+    input[type="button"] {
+        margin: 10px;
+      }
+
       input[type="text"] {
         width: 100px;
       }
@@ -25,11 +29,18 @@
         display: inline-block;
         width: 60px;
       }
+
+      .note {
+        font-size: small;
+        display: block;
+      }
     </style>
   </head>
 
   <body>
     <form id="list_form">
+      <h3>Predefined list</h3>
+      <span class="note">The number in parentheses is the offset</span>
       <input type="radio" name="list" value="1|1000|2" id="1" /><label for="1">1 -> 1000 (2)</label><br/>
       <input type="radio" name="list" value="1|100000|1" id="2" /><label for="2">1 -> 100000 (1)</label><br/>
       <input type="radio" name="list" value="1|100000|3" id="3" /><label for="3">1 -> 100000 (3)</label><br/>
@@ -38,6 +49,7 @@
     </form>
 
     <form id="input_form">
+      <h3>Create your own list</h3>
       <label for="input_from">From</label>     <input type="text" id="input_from" value="1" /><br/>
       <label for="input_to">To</label>         <input type="text" id="input_to" value="1000" /><br/>
       <label for="input_offset">Offset</label> <input type="text" id="input_offset" value="1" /> <br/>
