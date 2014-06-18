@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <script type="text/javascript" src="/home/jeje/Documents/Programming/html/canvas-tests/public/javascripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="hash.js"></script>
+
+    <style>
+      input[type="text"] {
+        width: 100px;
+      }
+
+      form {
+        float: left;
+      }
+
+      #list_form {
+        padding-right: 30px;
+        border-right: 1px solid black;
+      }
+
+      #input_form {
+        padding-left: 30px;
+      }
+
+      #input_form label {
+        display: inline-block;
+        width: 60px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form id="list_form">
+      <input type="radio" name="list" value="1|1000|2" id="1" /><label for="1">1 -> 1000 (2)</label><br/>
+      <input type="radio" name="list" value="1|100000|1" id="2" /><label for="2">1 -> 100000 (1)</label><br/>
+      <input type="radio" name="list" value="1|100000|3" id="3" /><label for="3">1 -> 100000 (3)</label><br/>
+      <input type="button" id="list-remove" value="Remove" />
+      <input type="button" id="list-add" value="Add" />
+    </form>
+
+    <form id="input_form">
+      <label for="input_from">From</label>     <input type="text" id="input_from" value="1" /><br/>
+      <label for="input_to">To</label>         <input type="text" id="input_to" value="1000" /><br/>
+      <label for="input_offset">Offset</label> <input type="text" id="input_offset" value="1" /> <br/>
+      <input type="button" id="input-remove" value="Remove" />
+      <input type="button" id="input-add" value="Add" />
+    </form>
+
+    <div style="clear: both;">
+      Total: <span id="total">0</span><br/>
+      Timing: <span id="timing">0 ms</span><br/>
+      </div>
+  </body>
+</html>
